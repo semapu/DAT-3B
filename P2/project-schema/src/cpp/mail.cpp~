@@ -1,0 +1,220 @@
+
+#include <dat_http/cgi.hpp>
+#include <dat_db/ddb.hpp>
+#include <iostream>     // cout
+#include <dat_http/params.hpp>
+#include <string>
+
+using namespace std;
+using namespace dat_base;
+using namespace dat_http;
+using namespace dat_db;
+
+
+Response mailApp(Request request);
+
+int main(int argc, char **argv, char **env)
+{
+    cgiApp(env, mailApp);
+    return 0;
+}
+
+
+// Nom del directori arrel de la base de dades (relatiu al directori on s'ubica el CGI)
+string db_dir = "mail-db";
+
+Response page();
+Response error_page(const string& msg);
+
+
+Response mailApp(Request request &req)
+{
+    try {
+
+        // A REALITZAR PER L'ESTUDIANT
+        // Aqui ha d'anar tot el processat del CGI
+	string pathInfo  = req.rawPathInfo(); 
+	if(pathInfo == “/login”){
+
+		if(req.method()==”GET”){
+			
+			return getLoginR();
+
+		} else if (req.method()==”POST”){
+	
+			return postLoginR();
+		
+		}else {
+
+			return errorResp( …
+
+				…
+			);
+		
+		}
+	}else if (pathInfo = “/inbox”){
+
+		…
+
+	} else if (pathInfo = “/send”){
+
+		…
+
+	}else{
+		//recurs no trobat, error codi 404 Not Found 
+
+		return errorResp (notFound404, “Not Found:” + pathInfo);
+	}
+
+        return page(request);//el request afegit per nosaltres
+
+    } catch (const LibException& e) {
+        return error_page("LibException: " + e.str());
+    } catch (const std::exception& e) {
+        return error_page(string("Standard exception: ") + e.what());
+    } catch (...) {
+        return error_page("Unknown exception");
+    }
+}
+
+
+/****************************************************************
+ * Sortida del CGI
+ */
+
+Response page()
+{
+    ByteString html;
+    DBConnection dbc(db_dir);
+
+    html.append("<html><head><meta charset=\"UTF-8\">\n").
+        append("<title>Pràctica 2: Missatgeria</title>\n").
+        append("</head><body>\n").
+        append("<h1>Sistema de Missatgeria</h1>\n").
+
+        append("<p><em>EL CGI FUNCIONA !</em></p>\n").
+
+        append("<p>A REALITZAR PER L'ESTUDIANT</p>\n").
+        append("<p>Aquesta pàgina ha d'oferir la funcionalitat requerida de la pràctica 2.</p>\n").
+
+        append("<p>Enllaç a la <a href=\"login.html\">pàgina d'inici</a></p>\n").
+
+        append("</body></html>\n");
+
+    ResponseHeaders hs;
+    hs.push_back(Header("Content-Type", MIME_HTML));
+    return Response(ok200, hs, html);
+}
+
+Response error_page(const string& msg)
+{
+    ByteString html;
+    html.append("<html><head><meta charset=\"UTF-8\">\n").
+        append("<title>Pràctica 2: Mail</title>\n").
+        append("</head><body>\n").
+        append("<h2>ERROR</h2>").
+        append("<h3><font color=\"red\">").append(msg).append("</font></h3>\n").
+        append("<p><a href=\"#\">Pàgina de sessió</a></p>\n").
+        append("</body></html>\n");
+
+    ResponseHeaders hs;
+    hs.push_back(Header("Content-Type", MIME_HTML));
+    return Response(internalServerError500, hs, html);
+}
+
+Response errorResp (Status st, string msg){
+
+	ResponseHeaders hs;
+	hs.push_front(Header(“Content-Type”, MIME_HTML));
+	return Response (st, hs, error_page(msg)); //string q serà contingut HTML
+}
+
+//mètodes que fem nosaltres
+String errorPage(msg){
+	//return "<html><head>...</head><body>...+msg+...</body></html>";
+}
+Response getLoginR(Request req){
+	ResponseHeader hs;
+	hs.push_front(Header("content-type", MIME_HTML));
+	return Response (ok200, hs, loginPage(""));
+}
+
+String loginPage (String msg){
+	return "<html><head><tittle><Login></tittle></head>\n\
+		<body><h1>Login</h1>\n\
+		<from action ="#" method = "POST">\n\
+		<p> "+msg+"</p> \n\
+		<input type="text" name = "user">\n\
+		<input type="submit" name = "login"> value="Entrar">\
+		</from>\n\
+		</body></html>";
+}
+
+Response postLoginR(Request req){
+	Query oparams=postParams(req);
+	Maybe<string> mb_user =lookingParam("user", params);
+	Maybe<string> mb_passwd =lookingParam("password", params);
+	if (isNothing(mb_user) ||  isNothing(mb_passwd)){
+		//return .. error ...	
+	}else{
+		Maybe<user> mb_u=userByName(fromJust(mb_user));
+		if(isNothing(mb_u){
+		//return ...error d'autenticacio...				
+		}else{
+			if(fromJust(mb_u).password==fromJust(mb_passwd)){
+				pair<SessionMap,SaveSession> session=clientLoadSession (req);
+				session.first.insert(pair<string,string>("userId", fromJust(mb_u.Id)));
+				ResponseHeader hs = session.second (session.first);
+				hs.push_front(Header("location", CGI_URl + "/inbox"));
+				return Response(seeOther303, hs, "");	
+			}		
+		}
+		
+	}
+}
+
+Response getInboxR(Request req){
+	pair<SessionMap,SaveSession> session=clientLoadSession (req);
+	if(session.first.connt("userId")==0){
+		//return .. error ...
+	}else{
+		string userId= session.first.at("userId");
+		string html= inboxPage(userId);
+		Response Header hs= session.second(session.first);
+		hs.push_front(Header(Header("Content_Type", MIME_HTML)));
+		return Response (ok200, hs, html);
+	}
+}
+
+String inboxPage(string userId){
+	//string html="<html><head>...</head><body>....</body></html>"
+	list <Message> msgs = messagesByTo(userId);
+	html.apend("<from...>\n\
+		<table><tr><th></th><th></th>De</th><th>Data</th>\
+		<th>Assumpte</th></tr>\n");
+	for(auto mit=msgs.cbegin();mit!=msgs.cend();++mit){
+	message m= *mit;	
+	time_t date=m.date;
+	}
+}
+
+
+boolean getLoginR (char user, char password){
+
+/*
+
+Response mark(const Query &params)
+{
+    list<string> ids = lookupParams("id", params);
+    DBConnection dbc(db_dir);
+    for (auto it = ids.cbegin(); it != ids.cend(); it++) {
+        dbc.update("tasks", "done", "true", "id", *it);
+    }
+    return get();
+}
+
+*/
+
+}
+
+

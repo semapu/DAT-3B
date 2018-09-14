@@ -1,0 +1,56 @@
+S'ha iniciat l'execució de script a dc 24 feb 2016 09:07:38 CET
+ldatusr12@soft3:~$ telnet softy[K0.upc.edu 80
+Trying 10.0.5.10...
+Connected to soft0.upc.edu.
+Escape character is '^]'.
+POST /web/cgi/exemples/test-http.cgi Ht TTP/1.0
+contebn  nt-type:text/plain
+content-lengh th:4
+hola    
+hola
+HTTP/1.1 200 OK
+Date: Wed, 24 Feb 2016 09:07:57 GMT
+Server: Apache
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+<HTML>
+<HEAD><TITLE>Test CGI/1.0</TITLE></HEAD>
+ <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<CENTER><H1>Resultat del test de CGI/1.0</H1></CENTER>
+<p>argc &eacute;s 1.<br>
+argv[0] &eacute;s <code>"/var/www/web/cgi/exemples/test-http.cgi"</code>.<br>
+</p>
+<p>Directori de treball: <code>"/home/pract/LabWEB/WEBprofe/www/web/cgi/exemples"</code>.<br></p>
+<p>Variables d'entorn:
+<ul>
+<li> <em>SERVER_SOFTWARE</em> = <code>Apache</code></li>
+<li> <em>SERVER_NAME</em> = <code>soft0.labs-entel.local</code></li>
+<li> <em>GATEWAY_INTERFACE</em> = <code>CGI/1.1</code></li>
+<li> <em>SERVER_PROTOCOL</em> = <code>HTTP/1.0</code></li>
+<li> <em>SERVER_PORT</em> = <code>80</code></li>
+<li> <em>REQUEST_METHOD</em> = <code>POST</code></li>
+<li> <em>PATH_INFO</em> = <code>(null)</code></li>
+<li> <em>PATH_TRANSLATED</em> = <code>(null)</code></li>
+<li> <em>SCRIPT_NAME</em> = <code>/web/cgi/exemples/test-http.cgi</code></li>
+<li> <em>QUERY_STRING</em> = <code></code></li>
+<li> <em>REMOTE_HOST</em> = <code>(null)</code></li>
+<li> <em>REMOTE_ADDR</em> = <code>10.0.40.103</code></li>
+<li> <em>REMOTE_USER</em> = <code>(null)</code></li>
+<li> <em>AUTH_TYPE</em> = <code>(null)</code></li>
+<li> <em>CONTENT_TYPE</em> = <code>text/plain</code></li>
+<li> <em>CONTENT_LENGTH</em> = <code>4</code></li>
+<li> <em>HTTP_ACCEPT</em> = <code>(null)</code></li>
+<li> <em>HTTP_ATTR1</em> = <code>(null)</code></li>
+</ul>
+</p>
+<p>Entrada:</p>
+<pre><em>(inici d'entrada)</em>hola<em>(fi d'entrada)</em></pre>
+</BODY>
+</HTML>
+Connection closed by foreign host.
+ldatusr12@soft3:~$ exit
+exit
+
+S'ha finalitzat l'execució de script a dc 24 feb 2016 09:12:54 CET

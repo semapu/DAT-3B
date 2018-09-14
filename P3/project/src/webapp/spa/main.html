@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" data-ng-app="webMessages">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Message System</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <!-- App specific -->
+  <script type="text/javascript" src="js/webMessages.js"></script>
+  <script type="text/javascript" src="js/MainController.js"></script>
+  <script type="text/javascript" src="js/InboxController.js"></script>
+</head>
+<body data-ng-controller="MainController">
+<div class="container-fluid">
+
+  <h1>Message System</h1>
+
+  <div class="row">
+    <div class="col-sm-8"></div>
+    <div class="col-sm-2">
+      <span class="glyphicon glyphicon-user"></span>Usuari: <b data-ng-bind="user.name"></b>
+    </div>
+    <div class="col-sm-2"><form method="POST" action="../logout">
+      <span class="glyphicon glyphicon-log-out"></span><button type="submit">Tanca sessió</button>
+    </form></div>
+  </div>
+
+  <div class="alert alert-info" role="alert">
+    <p>Aquesta aplicació és una petita demostració de com mostrar missatges amb <em>AngularJS</em>.
+      <strong>No inclou tota la funcionalitat requerida</strong>.</p>
+    <p>Podeu obtenir els fonts d'aquesta demo en la pàgina de
+      <a href="http://soft0.upc.edu/dat/practica3/index.html#download" target="_blank" class="alert-link">l'enunciat de la pràctica</a>.</p>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li data-ng-class="{active: selectedView=='INBOX'}">
+        <a href="#" data-ng-click="selectView('INBOX')"><strong>Inbox</strong></a>
+    </li>
+    <li data-ng-class="{active: selectedView=='COMPOSE'}">
+        <a href="#" data-ng-click="selectView('COMPOSE')"><strong>Compose</strong></a>
+    </li>
+  </ul>
+
+<!-- ---------------------------------------------------------------------------- -->
+
+<div data-ng-if="selectedView=='INBOX'">
+  <div data-ng-include="'partials/inbox.html'" data-ng-controller="InboxController"></div>
+</div>
+
+<div data-ng-if="selectedView=='COMPOSE'">
+  <div data-ng-include="'partials/compose.html'"></div>
+</div>
+
+<!-- ---------------------------------------------------------------------------- -->
+
+</div>
+</body>
+</html>

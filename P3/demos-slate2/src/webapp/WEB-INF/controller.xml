@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller>
+  <action path="/login.do" class="webprofe.webfw.demos.slate2.LoginCommand">
+	<transition label="success" path="/slate.view"/>
+	<transition label="error" path="/index.html"/>
+  </action>
+  <action path="/logout.do" class="webprofe.webfw.demos.slate2.LogoutCommand"
+	  transition="/index.html"/>
+  <action path="/set.do" class="webprofe.webfw.demos.slate2.SetCommand">
+	<transition label="success" path="/slate.view"/>
+	<transition label="error" path="/index.html"/>
+  </action>
+</controller>

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<project name="Web Project" default="war" xmlns:artifact="antlib:org.apache.maven.artifact.ant"> 
+
+    <property environment="env"/>
+    <property file="${webproject.properties}"/>
+    <property file="project.properties"/>
+    <property name="debug" value="true"/>
+
+    <!-- Properties -->
+
+    <target name="echoproperties"
+            description="Display properties; useful for debugging">
+        <echoproperties>
+            <propertyset negate="true">
+                <propertyref builtin="system"/>
+                <propertyref prefix="ant."/>
+                <propertyref prefix="env."/>
+            </propertyset>
+        </echoproperties>
+    </target>
+
+    <target name="setproperty"
+            description="Set property (needs properties from command line: property-name and property-value)">
+        <propertyfile file="project.properties">
+            <entry key="${property-name}" value="${property-value}"/>
+        </propertyfile>
+    </target>
+
+    <target name="getproperty"
+            description="Display property value (needs property from command line: property-name)">
+        <echoproperties>
+            <propertyset>
+                <propertyref name="${property-name}"/>
+            </propertyset>
+        </echoproperties>
+    </target>
+
+
+    <!-- App building -->
+
+    <target name="dependencies">
+        <copy todir="${build.dir}/deps-cache/runtime">
+            <fileset dir="${repositories.user.dir}" includes="${deps.compile.jars} ${deps.runtime.jars}"/>
+            <fileset dir="${repositories.system1.dir}" includes="${deps.compile.jars} ${deps.runtime.jars}"/>
+            <fileset dir="${repositories.system2.dir}" includes="${deps.compile.jars} ${deps.runtime.jars}"/>
+        </copy>
+        <copy todir="${build.dir}/deps-cache/runtime"><!-- check all dependencies exist in cache -->
+            <filelist dir="${build.dir}/deps-cache/runtime" files="${deps.compile.jars} ${deps.runtime.jars}"/>
+        </copy>
+        <path id="compile.classpath">
+            <fileset dir="${build.dir}/deps-cache/runtime" includes="${deps.compile.jars}"/>
+        </path>
+        <!--available file="webfw-1.1.0.jar" property="available.webfw-1.1.0.jar" filepath="${system.lib.dir}:${lib.dir}"/-->
+    </target>
+
+    <target name="compile" depends="dependencies"
+            description="Compile source code">
+        <mkdir dir="${classes.dir}"/>
+        <javac destdir="${classes.dir}" source="${src.java.version}" target="${src.java.version}" encoding="${src.java.encoding}"
+               includeAntRuntime="no" debug="${debug}" deprecation="yes">
+            <src path="${src.java.dir}"/>
+            <classpath>
+              <path refid="compile.classpath"/>
+            </classpath>
+        </javac>
+        <!--jar jarfile="${build.dir}/${app.name}-${app.version}.jar">
+            <fileset dir="${classes.dir}"/>
+        </jar-->
+    </target>
+
+    <target name="war" depends="compile"
+            description="Package the whole application as a war file">
+        <war destfile="${war.file}" duplicate="fail">
+            <fileset dir="${src.webapp.dir}"/>
+            <classes dir="${classes.dir}"/>
+            <lib dir="${build.dir}/deps-cache/runtime" excludes="${deps.provided.jars}"/>
+        </war>
+    </target>
+
+    <target name="clean"
+            description="Remove all build artifacts">
+        <delete dir="${build.dir}" />
+    </target>
+
+
+    <!-- Deploy -->
+
+    <!-- Uncomment this to use a local Tomcat server -->
+    <!--target name="define_tomcat">
+        <path id="classpath.tomcat">
+            <pathelement location="/usr/share/java/catalina-ant.jar"/>
+        </path>
+        <taskdef name="deploy" classname="org.apache.catalina.ant.DeployTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="list" classname="org.apache.catalina.ant.ListTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="resources" classname="org.apache.catalina.ant.ResourcesTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="roles" classname="org.apache.catalina.ant.RolesTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="start" classname="org.apache.catalina.ant.StartTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="stop" classname="org.apache.catalina.ant.StopTask"
+             classpathref="classpath.tomcat"/>
+        <taskdef name="undeploy" classname="org.apache.catalina.ant.UndeployTask"
+             classpathref="classpath.tomcat"/>
+    </target>
+
+    <target name="deploy" depends="define_tomcat, war"
+            description="Deploy to local Tomcat">
+        <echo level="info">Tomcat manager URL: ${tomcat.manager.url}</echo>
+        <deploy url="${tomcat.manager.url}" username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${context.path}" war="${war.file}"/>
+    </target>
+
+    <target name="reload" depends="define_tomcat"
+            description="Reload on local Tomcat">
+        <reload url="${tomcat.manager.url}" username="${tomcat.manager.username}"
+                password="${tomcat.manager.password}"
+                path="/${context.path}"/>
+    </target>
+
+    <target name="undeploy" depends="define_tomcat"
+            description="Undeploy from local Tomcat">
+        <undeploy url="${tomcat.manager.url}" username="${tomcat.manager.username}"
+                  password="${tomcat.manager.password}"
+                  path="/${context.path}"/>
+    </target>
+
+    <target name="list" depends="define_tomcat"
+            description="List installed Tomcat applications">
+        <list url="${tomcat.manager.url}" username="${tomcat.manager.username}"
+              password="${tomcat.manager.password}"/>
+    </target-->
+
+
+    <!-- Uncomment this to use the lab Tomcat Proxy -->
+    <target name="deploy" depends="war"
+            description="Deploy to lab Tomcat">
+      <exec dir="." executable="${tomcat_proxy.exe}">
+        <arg value="deploy"/>
+        <arg value="/${context.path}"/><arg value="${war.file}"/>
+      </exec>
+    </target>
+
+    <target name="undeploy"
+            description="Undeploy from lab Tomcat">
+      <exec dir="." executable="${tomcat_proxy.exe}">
+        <arg value="undeploy"/>
+        <arg value="/${context.path}"/>
+      </exec>
+    </target>
+
+    <target name="list"
+            description="List installed lab applications">
+      <exec dir="." executable="${tomcat_proxy.exe}">
+        <arg value="list"/>
+      </exec>
+    </target>
+
+
+    <target name="redeploy" depends="undeploy, deploy"
+            description="Undeploy and then deploy"/>
+
+</project>
+

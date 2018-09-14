@@ -1,0 +1,57 @@
+<html><head><meta charset="UTF-8">
+
+<title>Servei de missatgeria</title>
+</head><body>
+  <center><H1>Benvingut al servei de missatgeria </H1></center>
+    <table width="100%"><tr><td align="left">
+    
+      <H3>A qui li vols enviar el missatge?</H3>
+      <P> <INPUT NAME="To" SIZE="30"> </P>
+      
+      <H3>Introdueixi l'assumpte del missatge:</H3>
+      <P> <INPUT NAME="Subject" SIZE="30"> </P>
+      
+      <H3>Introdueixi el seu missatge: </H3>
+      <FORM METHOD="POST" ACTION="mail.cgi">
+	<textarea rows="4" cols="50" NAME = "Content"></textarea>
+      
+	<P><INPUT TYPE="submit" NAME="ok" VALUE="Enviar"></P>
+      </FORM>
+    </td> 
+    
+    <td ><table width="100%"> 
+      <tr>
+      <input type="checkbox" name="Conversa" value="conversa">
+      
+      <p><b>Assumpte:  <span style="color:#2E2EFE">
+	DEURES</span></b></p>
+      
+      <p><b>Emissor: </b><em>
+	Claudia</em></p>
+	
+      <p><b>Hora: </b><em>
+	15:20:33</em></p>
+	
+      <p><b>Missatge: </b><br><br>
+	Hihaexamendeaapx</br></p><hr>
+	
+      </tr>
+      <input type="checkbox" name="Conversa" value="conversa">
+      
+      <p><b>Assumpte:  <span style="color:#2E2EFE">
+	EXAMEN</span></b></p>
+      
+      <p><b>Emissor: </b><em>
+	  Claudia</em></p>
+	  
+      <p><b>Hora: </b><em>
+	  15:23:33</em></p>
+
+      <p><b>Missatge: </b><br><br>
+	  examenDAT</br></p><hr>
+	  
+      <P><INPUT TYPE="submit" NAME="ok" VALUE="Eliminar"></P>
+      
+    </table></td>
+    </tr></table>
+</body></html>

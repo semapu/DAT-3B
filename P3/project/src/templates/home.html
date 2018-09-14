@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pràctica 3 - Home</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+
+  <div class="row page-header">
+    <div class="col-sm-8"><h2>Pràctica 3: Un sistema simple de correu per la WEB</h2></div>
+    <div class="col-sm-4">
+    $maybe{ user :: Entity<User> <- mbUser }
+      <form method="post" action="@{MsgRoute.LogoutR}">
+      <span class="glyphicon glyphicon-user"></span>Usuari: <b>#{user.value.name}</b>&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-log-out"></span><button type="submit" class="btn btn-link">Tanca sessió</button>
+      </form>
+    $end
+    </div>
+  </div>
+
+  $maybe{ errMessage :: Html <- mbErrMessage }
+    <div class="alert alert-danger" role="alert">#{errMessage}</div>
+  $end
+
+  $maybe{ user :: Entity<User> <- mbUser }
+    <p>Selecciona l'aplicació:</p>
+    <ul>
+      <li><a href='@{MsgRoute.InboxR}'>[Inbox]</a></li>
+      <li><a href='spa/main.html'>[2a part (SPA)]</a></li>
+    </ul>
+  $nothing
+    <form class="form-horizontal" method="POST" action="@{MsgRoute.LoginR}">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">Nom d'usuari:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="name" placeholder="Introdueix el teu nom">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="password">Clau d'accés:</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" name="password" placeholder="Introdueix el teu password">
+        </div>
+      </div>
+      <p class="col-sm-offset-2 col-sm-10" class="help-block">
+        Hi ha 3 usuaris amb noms usuari1, usuari2 i usuari3 i claus clau1, clau2 i clau3 respectivament.
+      </p>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" name="login" class="btn btn-primary">Entra</button>
+        </div>
+      </div>
+    </form>
+  $end
+
+</div>
+</body>
+</html>
+

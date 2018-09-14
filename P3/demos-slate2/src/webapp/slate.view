@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<v:view xmlns:v="http://soft0.upc.es:8080/web/NS/webfw/view"
+	xmlns:b="/base.vlib"
+	component-element-prefixes="b">
+<HTML>
+<HEAD>
+ <TITLE>Demo: Pizarra remota</TITLE>
+</HEAD>
+<BODY BGCOLOR="lightblue">
+<center><H1>Demo: Pizarra remota</H1></center>
+<HR/>
+ <b:set var="srv" value="${request.session.getAttribute('demos.slate2')}"/>
+ <H2>Usuario: ${srv.user}</H2>
+ <b:set var="slate_value" value="${srv.value}"/>
+ <H2>Contenido:</H2>
+ <b:if test="${slate_value}">
+  <p>Modificado el día <em>${slate_value.date}</em></p>
+  <p>Por <em>${slate_value.who}</em></p>
+ </b:if>
+ <FORM METHOD="POST" ACTION="set.do">
+  <p><TEXTAREA NAME="message" ROWS="10" COLS="100">${slate_value.text}</TEXTAREA></p>
+  <p><INPUT TYPE="submit" NAME="send" VALUE="Cambia contenido"/>
+  <a href="slate.view">Restaura contenido actual</a></p>
+ </FORM>
+
+ <HR/>
+ <FORM METHOD="POST" ACTION="logout.do">
+  <p><INPUT TYPE="submit" VALUE="Logout"/></p>
+ </FORM>
+
+</BODY>
+</HTML>
+</v:view>

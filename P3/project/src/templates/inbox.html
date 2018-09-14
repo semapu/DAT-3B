@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pràctica 3 - Inbox</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+
+  <div class="row page-header">
+    <div class="col-sm-8"><h2>Pràctica 3: Un sistema simple de correu per la WEB</h2></div>
+    <div class="col-sm-4">
+      <form method="post" action="@{MsgRoute.LogoutR}">
+      <span class="glyphicon glyphicon-user"></span>Usuari: <b>#{userName}</b>&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-log-out"></span><button type="submit" class="btn btn-link">Tanca sessió</button>
+      </form>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li class="active">
+        <a href="@{MsgRoute.InboxR}"><strong>Inbox</strong></a>
+    </li>
+    <li>
+        <a href="@{MsgRoute.ComposeR}"><strong>Compose</strong></a>
+    </li>
+	<li class="disable"> 
+		<a href ="@{MsgRoute.MessageR}"><strong>Message</strong></a>
+	</li>
+  </ul>
+
+  <h3>Missatges rebuts</h3>
+
+  $if{ received.size()==0 }
+    <b>No hi ha missatges rebuts</b>
+  $else
+    <table class="table">
+      <thead><tr>
+	<th>Select</th>
+        <th>De</th>
+        <th>Data</th>
+        <th>Assumpte</th>
+      </tr></thead>
+      <tbody>
+      $forall{ message ::  Pair<Entity<Message>, String> <- receivedWithName} 
+        <tr>
+	
+	
+          <td>
+	<form action="">
+	<input type="checkbox" name="checkbox" value="@{MsgRoute.MessageR(message.c1.id)}"></td>
+		<td>#{message.c2}</td>
+          <td>#{new java.text.SimpleDateFormat("d MMMM yyyy, H:mm").format(message.c1.value.date)}</td>
+          <td><a href="@{MsgRoute.MessageR(message.c1.id)}">#{message.c1.value.subject}</a></td>
+	</form>
+        </tr>
+      $end
+      </tbody>
+    </table>
+<form method="post">
+<button type="submit" name="delete"> Delete</button>
+ </form>
+  $end
+
+</div>
+</body>
+</html>
+

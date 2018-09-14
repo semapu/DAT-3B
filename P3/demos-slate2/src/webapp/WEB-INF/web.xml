@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+
+    <welcome-file-list>
+        <welcome-file> index.view </welcome-file>
+        <welcome-file> index.html </welcome-file>
+    </welcome-file-list>
+
+<!-- WEBFW servlets -->
+
+    <servlet>
+        <servlet-name> controller </servlet-name>
+        <servlet-class> webprofe.webfw.controller.ControllerServlet </servlet-class>
+	<init-param>
+	  <param-name>config</param-name>
+	  <param-value> /WEB-INF/controller.xml </param-value>
+	</init-param>
+	<load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name> view </servlet-name>
+        <servlet-class> webprofe.webfw.view.http.ViewServlet </servlet-class>
+        <!-- Default VIEW processor:
+        <init-param>
+	  <param-name>processor_class</param-name>
+          <param-value>webprofe.webfw.view.runtime.tree.TreeProcessor</param-value>
+        </init-param>
+        -->
+    </servlet>
+
+<!-- Mappings -->
+
+    <servlet-mapping>
+	<servlet-name> controller </servlet-name>
+	<url-pattern> *.do </url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name> view </servlet-name>
+        <url-pattern> *.view </url-pattern>
+    </servlet-mapping>
+
+</web-app>

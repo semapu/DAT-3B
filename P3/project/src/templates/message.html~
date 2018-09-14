@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pràctica 3 - Inbox</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+
+  <div class="row page-header">
+    <div class="col-sm-8"><h2>Pràctica 3: Un sistema simple de correu per la WEB</h2></div>
+    <div class="col-sm-4">
+      <form method="post" action="@{MsgRoute.LogoutR}">
+      <span class="glyphicon glyphicon-user"></span>Usuari: <b>#{userName}</b>&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-log-out"></span><button type="submit" class="btn btn-link">Tanca sessió</button>
+      </form>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li>
+        <a href="@{MsgRoute.InboxR}"><strong>Inbox</strong></a>
+    </li>
+    <li >
+        <a href="@{MsgRoute.ComposeR}"><strong>Compose</strong></a>
+    </li>
+	<li class="active"> 
+		<a href ="@{MsgRoute.MessageR}"><strong>Message</strong></a>
+	</li>
+  </ul>
+
+  <h3>Missatge</h3>
+<table width="100%"><tr><td align="left">
+    
+      <H3>Emissor:</H3>
+      <p>#{remitent}</p>
+      
+	  <H3>Data:</H3>
+      <p>#{received.date}</p>
+
+      <H3>Assumpte:</H3>
+      <P>#{received.subject}</P>
+      
+      <H3>Missatge:</H3>
+      <p>#{received.text}</p>
+      
+	<P><INPUT TYPE="submit" NAME="ko" VALUE="Delete"></P>
+      </FORM>
+    </td> 
+
+</table>
+  
+
+</div>
+</body>
+</html>
+

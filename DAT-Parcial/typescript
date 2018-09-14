@@ -1,0 +1,204 @@
+S'ha iniciat l'execució de script a dc 24 feb 2016 08:43:52 CET
+ldatusr12@soft3:~$ GET /dat/ HTTp[KP [K/1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKrfIMFkSaoTSqKmC+BrghK0CpDHc0MuVzmMHin8LIORhpXbped+iYhSnZurWnEO0zcKcVIrzp026LVc5pMB9bUCAwEAAQ==_kJa6y7M1M4sYpqiwCCcy3/FeWY18PUGL2SpfEnYSXJkENEMV0wg/nzxeHxIPz7/jhe2oO7GFv4NZniPFOH5X9Q==">
+<head><script type="text/javascript">var abp;</script><script type="text/javascript" src="http://www.http.com/px.js?ch=1"></script><script type="text/javascript" src="http://www.http.com/px.js?ch=2"></script><script type="text/javascript">function handleABPDetect(){try{var imglog = document.createElement("img");imglog.src="http://www.http.com/rg-logabpstatus.php?a=eC8xZjQvZVFRakdqSHVYVHNlVTVlTWdldEpFZUdGa3FxU0IxVGhZOC9IanNlbDEvOVBHNllOK0IrK2N0bVR2VlMyVDZuVTE3MVQyTHZMZ1dOQjRjOHVJYSs3S0lpTzJlL3pRWFkySzUzRVE9&b="+abp;document.body.appendChild(imglog);}catch(err){}}try{window.onload=handleABPDetect();}catch(err){}</script><title>http.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable = no">
+<link rel="shortcut icon" type="image/png" href="http://b.rmgserving.com/rmgpsc/9733/fav1.png"/>
+<style type="text/css">
+*{margin:0; padding:0}
+a{text-decoration:none; outline:none}
+a:hover{text-indent:0; cursor:pointer}
+.clearfix:after{visibility: hidden;display:block;font-size: 0;content: " ";clear: both;height:0}
+* html .clearfix{zoom:1} 
+*:first-child+html .clearfix{zoom:1}
+:focus {outline:none}
+iframe{border:0;}
+body{font-family:Arial, Helvetica, sans-serif; background:url(http://c.rmgserving.com/rmgpsc/7867/body-bg.gif) 0 0 repeat #000}
+.arrows{background:url(arrows.jpg)}
+#main-wrap{background:url(http://d.rmgserving.com/rmgpsc/7867/header-bg.jpg) top center no-repeat; background-size:100% 100px}
+.fltlt{float:left;}
+.container{width:960px; margin:0 auto}
+.header{height:100px}
+.leftblk {background: url(http://d.rmgserving.com/rmgpsc/7867/logo1.png) 0 3px no-repeat;float: left;height: 60px;margin: 21px 0 0;overflow: hidden;padding: 10px 0 0 70px;width: 360px;word-wrap: break-word;}
+.leftblk img{float: left; margin-top: 23px; padding-right: 15px;}
+.domain_name{float:left;  font-size:26px; font-weight:normal; color:#fff;width: 100%; }
+.searchbox{float:right; width:460px; * width:470px; _width:470px; height:28px !important; padding-top:2px; margin-top:35px;}
+
+.content{padding-bottom:10px; background:#202020;}
+.frt_arr{float:left;width:286px; height:425px; background:url(http://a.rmgserving.com/rmgpsc/8667/frst_arr.jpg);background-position:10px 50px; background-repeat:no-repeat}
+
+
+.lst_arr{float:left;width:286px; height:425px; background:url(http://b.rmgserving.com/rmgpsc/8667/last_arr.jpg); background-position:0  50px; background-repeat:no-repeat}
+
+.kwd_bloack{float:left; width:388px; margin-top:48px}
+
+.bottom_bg{height:44px; /*background:#181818; */ margin-top:34px}
+.bottom_rs{width:960px; height:44px; overflow:hidden; margin:0 auto; position:relative}
+#bot_rs{padding-top:9px}
+.separator{position:absolute; top:0;  left:156px; width:5px; height:44px; border-left:2px solid #282828; background:url(http://a.rmgserving.com/rmgpsc/7867/sep-arw.gif) center center no-repeat}
+
+.footer-nav{width: 100%; height:74px; text-align:center; color:#c0c0c0;}
+.footer-nav a{font-size:12px; line-height:74px; color:#c0c0c0;  padding: 0 5px; text-decoration:underline}
+.footer-nav a:hover{text-decoration: none}
+
+.inquire {text-align:right; padding-top:10px; color:#fff}
+.inquire a {font-size:12px; font-weight:normal; color:#fff}
+
+.sale-msg {background:#fff; color:#4b4b4b; text-align:center; font-size:14px; width:100%; top:0; left:0}
+.sale-msg a {text-decoration: none; color:#079ce9; font-size:14px}
+.sale-msg a:hover, .bottom_rs ul li a:hover, .mid_rs ul li a:hover, .inquire a:hover{text-decoration: underline}
+
+#sonexoframe{}
+@media not all and (min-width: 970px){
+   .leftblk {float: none; margin: 0;background-size: 47px auto;height: 45px;width: 75%;}
+  .leftblk img {width: 40px; margin-top: 10px; padding-right: 15px}
+  .domain_name {line-height: normal; font-size: 19px; width: 100%; float: none;}
+  .searchbox {float: none; margin-top:6px}
+  
+  .container{width: 95%}
+  .content{padding-bottom: 40px;}
+  .frt_arr {width: 30%; background-size: 90%; background-position:10px 82px; }
+  .lst_arr {width: 30%; background-size: 90%; background-position: 0 86px; }
+  .kwd_bloack{width: 40%;}
+  .bottom_bg{display: none}
+  .footer-nav a{line-height: 45px}
+}
+@media not all and (min-width: 740px){
+  .frt_arr{display: none}
+  .lst_arr{display: none}
+  .kwd_bloack {float: none; width: 95%; margin: 0 auto; padding-top: 10px}
+
+}
+@media(min-width: 320px) and (max-width: 767px) {
+   .searchbox {width: auto;}
+   iframe{height:45px}
+}
+@media not all and (min-width: 400px) {
+#sonexoframe{height:40px}
+}
+
+
+</style>
+<script type="text/javascript" src="http://www.google.com/adsense/domains/caf.js"></script></head>
+<body onload="" onunload="" onBeforeUnload="">
+<noscript><meta http-equiv="refresh" content="0;url=http://www.http.com/rg-erdr.php?_rpo=t nxGRjzr&_rdm=iii.X55g.JvV&p=J1c4gcvmfN9ffFGoFgXoYVa%7C%40%7CbzGzTE%2C5f95Et%7C%40%7CX55g.JvV%7C%40%7C%7C%40%7C%7C%40%7CZzbHzEZHE%7C%40%7CzHZZFTH%7C%40%7C-R%7C%40%7C19c4NW4cGFHzTEtTEGZGzTbT%7C%40%7Ct+nh8llbj%7C%40%7Ct+7zFZKFH&ga=D91KlJWOEaW1V7Q9gbtV7fz9xnp%2B8OqKmKaYRASBN6Jfamrp8YnKJj6%2B4SKcC0gutx5cEYEZ9UB6H5inoqyeHAoKJlPe7UUn0xWLm91WZKNPPRofCiWGRz6s1AACcAMxwjPrmMsvp%2BcYaWGdK4usBc1v08U4bRB5yKRcpbNLkrKnZ9oBz0iPnQC15QUcprRG&t=gnojs" /><center><p style="padding:1em; font-size:1.5em;">For search results please <a href="http://www.http.com/rg-erdr.php?_rpo=t nxGRjzr&_rdm=iii.X55g.JvV&p=J1c4gcvmfN9ffFGoFgXoYVa%7C%40%7CbzGzTE%2C5f95Et%7C%40%7CX55g.JvV%7C%40%7C%7C%40%7C%7C%40%7CZzbHzEZHE%7C%40%7CzHZZFTH%7C%40%7C-R%7C%40%7C19c4NW4cGFHzTEtTEGZGzTbT%7C%40%7Ct+nh8llbj%7C%40%7Ct+7zFZKFH&ga=D91KlJWOEaW1V7Q9gbtV7fz9xnp%2B8OqKmKaYRASBN6Jfamrp8YnKJj6%2B4SKcC0gutx5cEYEZ9UB6H5inoqyeHAoKJlPe7UUn0xWLm91WZKNPPRofCiWGRz6s1AACcAMxwjPrmMsvp%2BcYaWGdK4usBc1v08U4bRB5yKRcpbNLkrKnZ9oBz0iPnQC15QUcprRG&t=gnojs" style="text-decoration:underline; color:#0000EE;">CLICK HERE</a>.</p></center></noscript> <script type="text/javascript" language="javascript">
+function __gpup(url, height, width, name) { sw=window.open(url,name,'height='+height+',width='+width+',location=no,toolbar=0,resizable=1,scrollbars=1');if (window.focus) {sw.focus()}; return false;};
+</script>
+<div class="clearfix" id="sonexoframe">
+<iframe scrolling="no" marginheight="0" src="http://37.97.135.129/subfiles/s.php?domain=http.com" width="100%" height="35" class="fltlt"></iframe>
+</div>
+<script text="text/javascript" >
+
+var design =  { 
+    'pageOptions':{
+      'pubId' : '',
+      'resultsPageBaseUrl' : '',
+      'fontFamily' : 'arial',
+      'hl' : 'en',
+      'maxTermLength' : 29,
+      'adtest' : 'on',
+      'clicktrackUrl' : '',
+      'fontFamilyAttribution' : 'arial',
+      'type' : 'pageoptions',
+'uiOptimize':false,
+
+      'pageLoadedCallback' : function(requestAccepted, status) {
+        document.body.style.visibility = 'visible';
+        if (!requestAccepted) {
+        }
+      }
+    },
+    'searchboxBlock':{
+    'container' : 'searchbox',
+    'type' : 'searchbox',
+    'fontSizeSearchInput' : 16,
+    'fontSizeSearchButton' : 13,
+    'widthSearchInput' : 215,
+    'colorSearchButton' : '#e2e2e2',
+    'hideSearchInputBorder' : false,
+    'hideSearchButtonBorder' : true,
+    'heightSearchInput' : 24,
+    'heightSearchButton' : 30
+  },
+
+    'mainrs':{
+      'container' : 'main_rs',
+      'type' : 'relatedsearch',
+    'colorBackground' : 'transparent',
+      'number' : 8,
+      'fontSizeTitle' : 20,
+    'titleBold': false,
+      'colorTitleLink' : '#aac0d9',
+      'noTitleUnderline' : false,
+    'lineHeightTitle' : 38,
+    'fontFamily': 'arial',
+    'webFontFamily' : 'Libre Baskerville',
+    'horizontalAlignment': 'center',
+    'fontSizeAttribution' : 13,
+    'colorAttribution' : '#ababab',
+    'attributionBold' : false,
+    'attributionUppercase': false,
+    'attributionSpacingBelow' : 10,
+    'rolloverLinkUnderline' : false,
+    'rolloverLinkColor' : '#e50d7c'
+    }
+    
+  
+
+};
+  </script>
+<div id="main-wrap" class="clearfix">
+  <div class="container clearfix">
+      <div class="header clearfix">
+          <div class="leftblk">
+                <h3 class="domain_name">http.com</h3>
+            </div>
+            <div class="searchbox clearfix" id="searchbox"></div>
+        </div>
+        <div class="content clearfix">
+          <div class="arrows frt_arr"></div>
+            <div class="kwd_bloack clearfix" id="main_rs"></div>
+            <div class="arrows lst_arr"></div>
+        </div>
+            </div>
+    <div class="bottom_bg clearfix">
+      <div class="bottom_rs clearfix">
+          <!--<span class="separator"></span>-->
+
+        </div>
+    </div>
+    <div class="footer-nav">                
+        <a href="#" onclick="return __gpup('http://www.http.com/rmgdsc/rprivacypolicy.php',600,800,'rpp');">Pol&iacute;tica de privacidad</a>    </div>
+</div>
+<script type="text/javascript" language="javascript">
+ window._debug=false; window._dumpdata=false; 
+		var _cflp = true;
+		var pgld  = true;
+		var totRS = -1;
+		var cntRS = 0;
+		var _cfstc = false;
+		var _cfblocker  = true;
+		var _cfrg =true;
+		var _cfHelp 	= _cfHelp || {};
+		_cfHelp.design	= design || {};
+		_cfHelp.servVars= {"webadfl":"webads.php","_clhdl":"\/\/dsctracking.com\/rg-cltrack.php?&gr=%5B%7Crdr_url%7C%5D&gm=wvg2Srfb%2B8%2FLpRh4C%2FZX4rnA1c7pbKRJttgEpf5DwE%2F1aEW5F7pgXE2PC0Wx55ZCyZc7WXRzJU3u5mRRSdyM0TOJc9u1wc2jdo39wpiDwJHZBFz33g5DVWSVe5ftO8oipOpBTwSrL4fnecZA6MxQslR3fiTg1F2jNtIB%2FMiGyAjSUca7JJPZNcN0FofkjF0g&gc=11062038454532927209439&gi=9RF4FaC0G2pqY41tksDHeaplsTfF%2BBJGCbeBfKbZAcnAKrkWHExqGwielBUtJQAX%2BJmG5PJ4s%2BhIVM4qiUNxF1EQyR9NJCr2qlyGbTtiAMu3sM1WZ68NNqT35SG303yuFfLSVpNM%2BLGE5YVXVFsRU%2FqMUro2%2FIsxnfSiC7IFvQJgbhRJIWBZSjod4nM4QiEncepYZxihHLUHNdDcmrXiPGKZg60G5cSJ92cRR%2FlhOeAbhoqNbNciI9NkSB9z0NLZ0DKy8mxnOgI8t61Bdb9Ga%2Bxf5EksxSj4qF2AXgXVP0rwM79UAqEJ5cfaWnE%2BVoUchb1VP6JigtqKI%2BNI2AEFhg%3D%3D","kchst":"http:\/\/www.http.com\/","kcpg":"render","kcprm":"ga=D91KlJWOEaW1V7Q9gbtV7fz9xnp%2B8OqKmKaYRASBN6Jfamrp8YnKJj6%2B4SKcC0gutx5cEYEZ9UB6H5inoqyeHAoKJlPe7UUn0xWLm91WZKNPPRofCiWGRz6s1AACcAMxwjPrmMsvp%2BcYaWGdK4usBc1v08U4bRB5yKRcpbNLkrKnZ9oBz0iPnQC15QUcprRG&gqsg=CCxKGjY5oSGX6wUtgaGfE6kvgT0d5M3q6YUdrpUYEq7z7AD0efq9ZeaaC9FJWgQT&klb=2&maxads=0&gerf=gpe4b4jaJPJElOCd3YnooIjSfa36wNa6yHO5%2F%2BT3I0k%3D&","jtchdl":"0","lkwtkn":null,"qry":null,"cntry":"ES","prvid":1566375,"lgky":"UkxUQ282eVdXSkpmSC9BK2hnUTVXR3BnQ0RxNWFtUVV3QnI1eTU3akQ2UVJGVmtyYzhaMko5SWlyL1gyeEROWDZjTUJyVURzYUg2eXFENm9JcHFuMGNBK3QxbnZrNDZHM0VrQmRRSWlHSG5GVjBpQlVTUDZZTWNTOFBQY0NTRmF5c0Frc2hpYzVyeFlPL3BSZXFHZm9RPT0%3D","_aftrprss":"","wclhdl":"http:\/\/dsctracking.com\/webclk?&gr=%5B%7Crdr_url%7C%5D&gm=fs81JUyda9wVkLghSyM%2FrFxl3%2BY3hel3vPDdkMl24UJvx6Uf4a%2BYvgtTAB4kXgnbnDQ%2F4%2F5fNTPdu%2F5bW4lIrbDfTxpFx4fF9rPq5vIqT5ckCbLnCZ%2Ffzj0i4F6AfCjj7dKA17m8L9R3PHKQBSbyKpcpuNFu1l7%2BvfYZSVarMJi1AG9ZWkdpp8ZkgPSmNpW5&gc=11062038454532927209435&gi=EXQCPAWDbM5eHzHxQhxhidpV8mfFpbVTEIj4L6fzR1qTxdixX3V9PWUXa1QQvyjNr%2FlvVrEUnmaSG%2BgW3ioFYrSOvxokUhxTuLSo%2BBYlY5jGbr4iO72H%2Bqvma3fCndQ5f5gtIVUzwFHwq1wAADwjOC4kxCJayTsIjCv0bNynmmbQervp9MbC0M2YreYM1cICREdzRy%2BEH4ssVJKU6B7MnwBCjp87sLil18BM%2FlgkS4O5auYAHl3DdaXOavIVkOUt29Isow8%2B4%2FaOw5v8sY29if%2Fo%2F0GR%2BjP0y5ZaB6QWVSs2CrZCi0gCeC%2BX9gWxtOQN210B3AKPjFaPVvoyrjMzYQ%3D%3D","is_webad_enabled":0,"loaderimage":"http:\/\/a.rmgserving.com\/rmgisc\/loader.gif","_afdad":1,"noredir":0,"erpub":"oversee11_3ph_adult_xml","erch":"372","erpubcln":"ca-dp-oversee11_3ph_xml","erchcln":"000307","ghu":"http:\/\/www.http.com\/rg-erdr.php?_rpo=t nxGRjzr&_rdm=iii.X55g.JvV&p=J1c4gcvmfN9ffFGoFgXoYVa%7C%40%7CbzGzTE%2C5f95Et%7C%40%7CX55g.JvV%7C%40%7C%7C%40%7C%7C%40%7CZzbHzEZHE%7C%40%7CzHZZFTH%7C%40%7C-R%7C%40%7C19c4NW4cGFHzTEtTEGZGzTbT%7C%40%7Ct+nh8llbj%7C%40%7Ct+7zFZKFH&ga=D91KlJWOEaW1V7Q9gbtV7fz9xnp%2B8OqKmKaYRASBN6Jfamrp8YnKJj6%2B4SKcC0gutx5cEYEZ9UB6H5inoqyeHAoKJlPe7UUn0xWLm91WZKNPPRofCiWGRz6s1AACcAMxwjPrmMsvp%2BcYaWGdK4usBc1v08U4bRB5yKRcpbNLkrKnZ9oBz0iPnQC15QUcprRG"};
+		_cfHelp.newOpts = {
+	    "pageoptions": {"kw":"car","pubId":"dp-oversee32_3ph_xml","channel":"012174,test49","hl":"","adtest":"off","resultsPageBaseUrl":"http:\/\/www.http.com\/?ga=D91KlJWOEaW1V7Q9gbtV7fz9xnp%2B8OqKmKaYRASBN6Jfamrp8YnKJj6%2B4SKcC0gutx5cEYEZ9UB6H5inoqyeHAoKJlPe7UUn0xWLm91WZKNPPRofCiWGRz6s1AACcAMxwjPrmMsvp%2BcYaWGdK4usBc1v08U4bRB5yKRcpbNLkrKnZ9oBz0iPnQC15QUcprRG&gqsg=CCxKGjY5oSGX6wUtgaGfE6kvgT0d5M3q6YUdrpUYEq7z7AD0efq9ZeaaC9FJWgQT&klb=2&maxads=0&gerf=trzsVTPxP8w21aovMS3WIiYofkUzDdY4clXjQWVtRTE%3D&","clicktrackUrl":"\/\/dsctracking.com\/rg-cltrack.php?&gr=http%3A%2F%2Fgoogle.com%2F%3FRMGcaf%261456299853&gm=qJfYhY%2FHEIyKCwgeO6n%2BCT6YgekLPHbW3kG8x4TboK%2FTvqFCb1Zr8Cv4Ly9wqXEw4V%2FVyr%2FN7KqeStDClcqHjU%2BJxRsvVdhf1nJUW1qZCevrlJU6BmOCYMhvkSGmYyxvu%2Fyj05Z%2FO18A0sn2dzgoayA9yIv6L%2FXoMBGZQh%2F2GmO3hw0%2B2pUTHOrgL1zgr7vc&gc=11062038454532927209688&gi=KiiFZHjczJ9XPddGr0w7pz%2FN%2BNDAnFH7TmxPtb8tRtAeh3CZmc8cZBpGwecqdSvLHn23iM2SaNqFm4Fa1pSTUhpOT68E0LODKAyNFiiFYYo%2Fftvz%2BXJsH0Dkd1wELlxejcqcBW42oc22E8UA7Obg9826P69ZQuBcaL8kC3HVecK%2F%2FBn7AskCaYlU0ff%2FpjJB2F47mUfzpztN6Fk6hoW8Xd00ETdYrbJq%2F1FsKBi3KiJazphtu1QhbHmT744%2Fj0a21IYi%2Bb2IH0QZ9c3pCGY%2Fq2pnuBImB%2BSjvz8D%2FWtBpFBD4sgRVLPR2doIsOhl3vCLNi2X2PJtTBPHSWmmsv8RWTCqAEa%2BxCYVRUqF%2FzWh6Nt3ZoZBxjZhhrW5EDVPX21M%2FZ7s7Guk%2B9UXf42QPgvCBQ%3D%3D","domainRegistrant":"as-drid-2351749742621707","optimizeTerms":false,"terms":"[\"Domain Registration\",\"Network Monitoring\",\"Email Hosting\",\"Website Hosting\",\"Network Monitoring Software\",\"Internet\",\"Internet Gratis\",\"Marketing Internet\",\"Internet USB\",\"venta por Internet\",\"Libros Internet\",\"Clases Por Internet\"]","domainName":"http.com"} ,
+		"relatedsearch" :{ "adLoadedCallback": function (cnm, ld) {if(pgld && !ld && _cfrg && !_cfstc && _cflp){cntRS++;if(cntRS >= totRS && totRS!= -1 ){window.location="http://www.http.com/?_stc_=1"}}}},
+		"textads" : {"adLoadedCallback": function (cnm, ld) {} },
+		"imagead" : {"adLoadedCallback": function (cnm, ld) {}},
+		"ads" : { "adLoadedCallback": function (cnm, ld) {}}
+    	};
+
+		_cfHelp.newOpts.pageoptions["pageLoadedCallback"]	= function(requestAccepted, status) { this.onPageLoad(requestAccepted, status); _cfblocker=false};try{if(abp){_cfHelp.newOpts.pageoptions['channel'] = _cfHelp.newOpts.pageoptions['channel']+',test101'}}catch(e){}
+</script>
+ <script type="text/javascript" src="http://c.rmgserving.com/rmgdsc/newcafv2.js"></script> </body>
+</html>ldatusr12@soft3:~$ 
+ldatusr12@soft3:~$ exit
+exit
+
+S'ha finalitzat l'execució de script a dc 24 feb 2016 08:44:37 CET
